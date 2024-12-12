@@ -1,0 +1,33 @@
+@media screen and (max-width: 1330px) {
+    .image-container {
+        display: none;
+    }
+
+    .main-container {
+        width: 50%;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .main-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .input-section {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 4rem;
+        max-height: 12rem;
+        overflow-y: auto;
+        flex-wrap: nowrap;
+    }
+
+    .gender-options {
+        margin-top: 2rem;
+    }
+}
