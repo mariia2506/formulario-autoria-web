@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home,person,email,phone,birthday,camera_alt,color_lens,person_add,accessibility_new" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Cadastro de Usuário - Musculação e Nutrição</title>
+</head>
+<body style="background-color: #e8f5e9; font-family: Arial, sans-serif;">
+    <header style="background-color: #0f0beec0; color: white; padding: 15px 0;">
+        <h1 style="text-align: center; font-size: 2em;">Cadastro - Musculação e Nutrição</h1>
+
+        <nav style="text-align: center; margin-top: 10px;">
+            <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none; font-size: 1.2em;">
+                <span class="material-symbols-outlined" style="vertical-align: middle;">home</span> Página Inicial
+            </a>
+            <a href="dev.html" style="color: white; margin: 0 15px; text-decoration: none; font-size: 1.2em;">
+                <span class="material-symbols-outlined" style="vertical-align: middle;">person</span> Sobre os Desenvolvedores
+            </a>
+            <a href="./server/server.php" style="color: white; margin: 0 15px; text-decoration: none; font-size: 1.2em;">
+                <span class="material-symbols-outlined" style="vertical-align: middle;">person_add</span> Formulário
+            </a>
+        </nav>
+    </header>
+
+    <main style="margin: 30px auto; max-width: 1000px;">
+        <div class="form-container" style="display: flex; justify-content: space-between; padding: 30px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="form-image" style="flex: 1; padding: 20px;">
+                
+            </div>
+            <div class="form-content" style="flex: 2; padding: 20px;">
+                <form action="./server/server.php" method="post">
+                    <div class="form-header" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="form-title">
+                            <h1 style="font-size: 1.8em; color: #333;">Preencha seus dados para começar</h1>
+                        </div>
+                        <div class="reset-button">
+                            <input type="reset" value="Limpar" style="background-color: #f44336; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+                        </div>
+                    </div>
+                    <div class="input-fields">
+                        <div class="input-field" style="margin-bottom: 20px;">
+                            <label for="name" style="font-weight: bold; color: #0f0beec0;">Nome Completo</label>
+                            <input id="name" type="text" name="name" placeholder="Digite seu nome" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em;">
+                        </div>
+                        <div class="input-field" style="margin-bottom: 20px;">
+                            <label for="email" style="font-weight: bold; color: #0f0beec0;">Endereço de E-mail</label>
+                            <input id="email" type="email" name="email" placeholder="Seu e-mail" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em;">
+                        </div>
+                        <div class="input-field" style="margin-bottom: 20px;">
+                            <label for="phone" style="font-weight: bold; color: #0f0beec0;">Número de Telefone</label>
+                            <input id="phone" type="tel" name="phone" placeholder="(xx) xxxxx-xxxx" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em;">
+                        </div>
+                        <div class="input-field" style="margin-bottom: 20px;">
+                            <label for="birthdate" style="font-weight: bold; color: #0f0beec0;">Data de Nascimento</label>
+                            <input id="birthdate" type="date" name="birthdate" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em;">
+                        </div>
+ 
+                        <div class="input-field" style="margin-bottom: 20px;">
+                            <label for="training-frequency" style="font-weight: bold; color: #0f0beec0;">Qual a sua frequência de treinos?</label>
+                            <select id="training-frequency" name="training-frequency" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em;">
+                                <option value="1-2x por semana">1-2 vezes por semana</option>
+                                <option value="3-4x por semana">3-4 vezes por semana</option>
+                                <option value="5 ou mais vezes por semana">5 ou mais vezes por semana</option>
+                            </select>
+                        </div>
+                        <div class="input-field" style="margin-bottom: 20px;">
+                            <label for="training-goal" style="font-weight: bold; color: #0f0beec0;">Qual é o seu principal objetivo com a musculação?</label>
+                            <select id="training-goal" name="training-goal" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em;">
+                                <option value="hipertrofia">Hipertrofia (ganho muscular)</option>
+                                <option value="emagrecimento">Emagrecimento</option>
+                                <option value="resistencia">Aumento de resistência física</option>
+                                <option value="forca">Aumento de força</option>
+                            </select>
+                        </div>
+                        <div class="input-field" style="margin-bottom: 20px;">
+                            <label for="diet" style="font-weight: bold; color: #0f0beec0;">Você segue algum tipo de dieta específica?</label>
+                            <select id="diet" name="diet" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em;">
+                                <option value="sim">Sim</option>
+                                <option value="não">Não</option>
+                            </select>
+                        </div>
+                        <div class="input-field" style="margin-bottom: 20px;">
+                            <label for="supplements" style="font-weight: bold; color: #0f0beec0;">Você utiliza suplementos alimentares?</label>
+                            <select id="supplements" name="supplements" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em;">
+                                <option value="sim">Sim</option>
+                                <option value="não">Não</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field" style="margin-bottom: 20px;">
+                            <label for="favorite-food" style="font-weight: bold; color: #0f0beec0;">Qual sua refeição preferida?</label>
+                            <input id="favorite-food" type="text" name="favorite-food" placeholder="Digite sua refeição preferida" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em;">
+                        </div>
+
+                    </div>
+                    <div class="submit-button">
+                        <input type="submit" value="Cadastrar" style="background-color: #0f0beec0; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+        <div class="footer-title">
+            <h3>IFRN - Campus Santa Cruz | Projeto Web</h3>
+            <span class="material-symbols-outlined" style="vertical-align: middle;">accessibility_new</span>
+        </div>
+        <h3>Orientador: Prof. Marcelo Figueiredo Barbosa Júnior</h3>
+        <div class="developer-info">
+            <h2>Equipe de Desenvolvimento</h2>
+            <span class="material-symbols-outlined" style="vertical-align: middle;">accessibility_new</span>
+        </div>
+        <h3>Maria Rita Palma de Araújo</h3>
+        <h3>Ana Caroline Lima de Medeiros</h3>
+    </footer>
+</body>
+</html>
